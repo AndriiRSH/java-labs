@@ -1,3 +1,3 @@
 # java-labs
-Lab 0
+Lab 1
 Variant N9
