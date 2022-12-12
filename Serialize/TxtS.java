@@ -10,7 +10,7 @@ public class TxtS implements InterfaceT<Circle> {
     @Override
     public void writeObject(String fileName, Circle object) throws IOException{
         try(FileWriter fos = new FileWriter(fileName)) {
-            fos.write(object.toString());
+            fos.write(object.toTxt());
         }
         catch (IOException e){
             e.printStackTrace();
