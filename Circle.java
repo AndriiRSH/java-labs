@@ -46,6 +46,35 @@ public class Circle extends Figure {
     }
     @Override
     public int hashCode() { return Objects.hash(radius); }
+    
+    @Override
+    public String toTxt() {
+        return "Name = " + this.getName() +
+                «,radius = " + this.getRadius() +
+                «,area=" + this.getArea();
+    }
+
+    @Override
+    public Object toDesir(String string) {
+        String[] str = string.split(",");
+        var values = new ArrayList<String>();
+        for (String item : str) {
+            String[] innerItem = item.split("=");
+            values.add(innerItem[1]);
+        }
+        for (var i :
+                values) {
+            i.trim();
+        }
+
+        var coach = new Coach.Builder()
+                .withName(values.get(0))
+                .withRadius(Integer.parseInt(values.get(1)))
+                .withArea(Integer.parseInt(values.get(2)))
+                .build();
+
+        return coach;
+    }
 
     public static class Builder{
         private Circle newCircle;
