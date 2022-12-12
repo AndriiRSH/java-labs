@@ -1,2 +1,2 @@
 # java-labs
-Lab 3 Collections
+Lab 3
