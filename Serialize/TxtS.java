@@ -32,7 +32,7 @@ public class TxtS implements InterfaceT<Circle> {
         }
 
         String everything = sb.toString();
-        return (Circle) tClass.newInstanse().toObject(everything);
+        return (Circle) tClass.newInstanse().toDesir(everything);
 
     }
 
